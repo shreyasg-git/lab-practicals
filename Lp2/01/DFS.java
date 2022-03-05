@@ -1,11 +1,13 @@
-import java.util.ArrayList;
+import java.util.*;
 
 // best representation is Adjacency Matrix, but 2nd best is Adjacency List
 // comparison can be done later
 
 public class DFS {
-
-    static int numOfNodes = 5;
+    static Scanner in = new Scanner(System.in);
+    static int numOfNodes;
+    static int numOfEdges;
+    static int dest;
     static int[][] matrix = {
             { 0, 0, 1, 0, 1 },
             { 0, 0, 1, 1, 1 },
@@ -13,7 +15,7 @@ public class DFS {
             { 0, 1, 1, 0, 0 },
             { 1, 1, 0, 0, 0 }
     };
-    static int dest = 4;
+
     static boolean isFound = false;
     static boolean[] visited = new boolean[numOfNodes];
 
