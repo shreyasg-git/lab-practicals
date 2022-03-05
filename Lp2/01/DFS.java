@@ -4,6 +4,7 @@ import java.util.*;
 // comparison can be done later
 
 public class DFS {
+    static boolean takeCustomInputsFlag = false;
     static Scanner in = new Scanner(System.in);
     static int numOfNodes;
     static int numOfEdges;
@@ -15,29 +16,39 @@ public class DFS {
             { 0, 1, 1, 0, 0 },
             { 1, 1, 0, 0, 0 }
     };
-
+    static boolean[] visited;
     static boolean isFound = false;
-    static boolean[] visited = new boolean[numOfNodes];
 
     public static void main(String[] args) {
-        // just for ensuring that all the elements are false already.
-        for (int i = 0; i < visited.length; i++) {
-            visited[i] = false;
+
+        if (takeCustomInputsFlag) {
+            takeDimensionInputs();
+            visited = new boolean[numOfNodes];
+            ensureVisited();
+            takeGoalStateInput();
+            matrix = new int[numOfNodes][numOfNodes];
+            takeMatrixInput();
+            runDFS(0);
+        } else {
+            numOfEdges = 7;
+            numOfNodes = 5;
+            visited = new boolean[numOfNodes];
+            ensureVisited();
+            dest = 4;
+            runDFS(0);
         }
-        // printArray(visited);
-        runDFS(0);
+        System.out.print("\nVisited Nodes -> ");
+        printArray(visited);
     }
 
     public static void runDFS(int at) {
         if (isFound) {
             return;
         }
-        // System.out.println("have reached - " + at);
         if (at == dest) {
             isFound = true;
         }
         if (visited[at]) {
-            // System.out.println("reached " + at + " already isliye me out hu");
             return;
         }
         visited[at] = true;
@@ -46,16 +57,44 @@ public class DFS {
         ArrayList<Integer> neighborNodes = new ArrayList<Integer>();
         for (int i = 0; i < matrix[at].length; i++) {
             if (matrix[at][i] == 1) {
-
                 neighborNodes.add(i);
             }
         }
-        if (at == 3) {
-            printArray(neighborNodes);
-        }
+
         System.out.print(at + "-> ");
         for (int i = 0; i < neighborNodes.size(); i++) {
-            DFS(neighborNodes.get(i));
+            runDFS(neighborNodes.get(i));
+        }
+    }
+
+    public static void takeMatrixInput() {
+        System.out.println("taking edges input...Enter edges one by one");
+        for (int i = 0; i < numOfEdges; i++) {
+            System.out.print("Enter start point of Edge " + i + " : ");
+            int tempStart = in.nextInt();
+            System.out.print("Enter End point of Edge " + i + " : ");
+            int tempEnd = in.nextInt();
+            matrix[tempStart][tempEnd] = 1;
+            matrix[tempEnd][tempStart] = 1;
+        }
+        System.out.println("taking edges input FINISHED.");
+    }
+
+    private static void takeGoalStateInput() {
+        System.out.print("Enter the Goal State : ");
+        dest = in.nextInt();
+    }
+
+    private static void takeDimensionInputs() {
+        System.out.print("Enter no. of nodes : ");
+        numOfNodes = in.nextInt();
+        System.out.print("Enter no. of edges : ");
+        numOfEdges = in.nextInt();
+    }
+
+    private static void ensureVisited() {
+        for (int i = 0; i < visited.length; i++) {
+            visited[i] = false;
         }
     }
 

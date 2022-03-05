@@ -1,9 +1,11 @@
 import java.util.*;
 
 class BFS {
+	static boolean takeCustomInputsFlag = false;
 	static Scanner in = new Scanner(System.in);
 	static int numOfNodes;
 	static int numOfEdges;
+	static int goalState;
 	static int[][] matrix = {
 			{ 0, 1, 1, 0, 1 },
 			{ 1, 0, 1, 1, 0 },
@@ -12,18 +14,21 @@ class BFS {
 			{ 1, 0, 1, 0, 0 } };;
 	static Queue<Integer> que = new LinkedList<Integer>();
 	static boolean[] visitedArr;
+	static boolean isFound = false;
 
 	public static void main(String[] args) {
-		takeDimensionInputs();
+		if (takeCustomInputsFlag) {
+			takeDimensionInputs();
+			visitedArr = new boolean[numOfNodes];
+			ensureVisited();
+			takeGoalStateInput();
+			matrix = new int[numOfNodes][numOfNodes];
+			takeMatrixInput();
+			executeBFS(0, goalState);
+		} else {
 
-		// matrix = new int[numOfNodes][numOfNodes];
-
-		visitedArr = new boolean[numOfNodes];
-
-		// just making sure that visited is all false
-		for (int i = 0; i < numOfNodes; i++) {
-			visitedArr[i] = false;
 		}
+
 		printArr(matrix);
 		executeBFS(0, 4);
 	}
@@ -52,6 +57,17 @@ class BFS {
 		}
 
 		printArr(visitedArr);
+	}
+
+	private static void ensureVisited() {
+		for (int i = 0; i < visitedArr.length; i++) {
+			visitedArr[i] = false;
+		}
+	}
+
+	private static void takeGoalStateInput() {
+		System.out.print("Enter the Goal State : ");
+		goalState = in.nextInt();
 	}
 
 	private static void takeDimensionInputs() {
