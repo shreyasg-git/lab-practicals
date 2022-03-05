@@ -3,7 +3,7 @@ import java.util.ArrayList;
 // best representation is Adjacency Matrix, but 2nd best is Adjacency List
 // comparison can be done later
 
-public class Main {
+public class DFS {
 
     static int numOfNodes = 5;
     static int[][] matrix = {
@@ -23,10 +23,10 @@ public class Main {
             visited[i] = false;
         }
         // printArray(visited);
-        DFS(0);
+        runDFS(0);
     }
 
-    public static void DFS(int at) {
+    public static void runDFS(int at) {
         if (isFound) {
             return;
         }
