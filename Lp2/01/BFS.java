@@ -17,6 +17,11 @@ class BFS {
 	static boolean isFound = false;
 
 	public static void main(String[] args) {
+		if (args[0].equals("true")) {
+			takeCustomInputsFlag = true;
+		} else {
+			takeCustomInputsFlag = false;
+		}
 		if (takeCustomInputsFlag) {
 			takeDimensionInputs();
 			visitedArr = new boolean[numOfNodes];

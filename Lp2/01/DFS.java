@@ -20,7 +20,11 @@ public class DFS {
     static boolean isFound = false;
 
     public static void main(String[] args) {
-
+        if (args[0].equals("true")) {
+            takeCustomInputsFlag = true;
+        } else {
+            takeCustomInputsFlag = false;
+        }
         if (takeCustomInputsFlag) {
             takeDimensionInputs();
             visited = new boolean[numOfNodes];
