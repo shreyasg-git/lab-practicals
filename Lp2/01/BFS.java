@@ -26,11 +26,13 @@ class BFS {
 			takeMatrixInput();
 			executeBFS(0, goalState);
 		} else {
-
+			numOfEdges = 7;
+			numOfNodes = 5;
+			visitedArr = new boolean[numOfNodes];
+			ensureVisited();
+			goalState = 4;
+			executeBFS(0, goalState);
 		}
-
-		printArr(matrix);
-		executeBFS(0, 4);
 	}
 
 	public static void executeBFS(int startNode, int goalState) {
