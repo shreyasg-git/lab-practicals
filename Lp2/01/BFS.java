@@ -11,7 +11,7 @@ class BFS {
 			{ 1, 0, 1, 1, 0 },
 			{ 1, 1, 0, 1, 1 },
 			{ 0, 1, 1, 0, 0 },
-			{ 1, 0, 1, 0, 0 } };;
+			{ 1, 0, 1, 0, 0 } };
 	static Queue<Integer> que = new LinkedList<Integer>();
 	static boolean[] visitedArr;
 	static boolean isFound = false;
