@@ -1,11 +1,8 @@
 import java.util.*;
 
 class SelectionSort {
-    // Declaring ANSI_RESET so that we can reset the color
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
-    // Declaring the color
-    // Custom declaration
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_RED = "\u001B[31m";
 
@@ -29,9 +26,7 @@ class SelectionSort {
                 }
             }
             swap(i, smallestIndex);
-
         }
-        // printArr(arr);
     }
 
     public static void swap(int src, int target) {
@@ -39,7 +34,6 @@ class SelectionSort {
         arr[src] = arr[target];
         arr[target] = temp;
         printArrAndHighlight(arr, new Integer[] { src, target });
-        // printArr(arr);
     }
 
     public static void printArrAndHighlight(int[] arr, Integer[] highlightIndices) {
