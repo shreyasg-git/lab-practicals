@@ -1,0 +1,35 @@
+Name Of Student - Shreyas B Gangurde
+Website URL - https://tailwindcss.com/docs/
+TEchnology/Language/Framework Used - Backend: PHP/Java Frontend: ReactJS, Tailwindcss
+Purpose Of Website - It is a documentation website for the CSS Framework called Tailwindcss.
+Things liked in the Website - Dark/Light Mode Feature, Dark Mode color choices, Code Embeds aer beautiful
+Things disliked in the Website - loading time is high.
+Overall evaluation of website - Good
+
+Website URL - https://app.netlify.com/
+TEchnology/Language/Framework Used - Backend: PHP/Java Frontend: ReactJS
+Purpose Of Website - This is a platform on which you can host your static/Frontend websites for free.
+Things liked in the Website - Color choices, Background Animations, Ease of access.
+Things disliked in the Website - nothing
+Overall evaluation of website - Very Good
+
+Website URL - https://jsonblob.com/
+TEchnology/Language/Framework Used - Backend: PHP/Java Frontend: HTML CSS JavaScript
+Purpose Of Website - On this website you can store your JSON data publically OR limited access, you can also access that data using their API.
+Things liked in the Website - Formatting Config, Linting and Syntax Highlighting Color Choices, Ease Of Access.
+Things disliked in the Website - No Support for Dark Mode.
+Overall evaluation of website - Very Good, Very very Useful.
+
+Website URL - https://leetcode.com/
+TEchnology/Language/Framework Used - Backend: PHP/Java Frontend: HTML CSS JavaScript/ ReactJS
+Purpose Of Website - This website is a Problem Solver's Paradise... You can solve problems, look for solutions, get compettitive feedback.
+Things liked in the Website - Very good Community, also very feature rich. Best Collection of problems.
+Things disliked in the Website - Some of the very basic features are premium-only.
+Overall evaluation of website - Very Good
+
+Website URL - https://css-tricks.com/
+TEchnology/Language/Framework Used - Backend: PHP/standard CMS  Frontend: HTML CSS JavaScript/ ReactJS
+Purpose Of Website - Best website out there for CSS / Frontend related blogs. Also has some tricks which help a lot.
+Things liked in the Website - Very good Community, Tricks and tips are the best. Frequently useful because of the platform.
+Things disliked in the Website - nothing
+Overall evaluation of website - Very Good

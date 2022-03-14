@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      label {
+        margin-right: 1rem;
+        font-size: 2rem;
+      }
+      .input-grp {
+        display: flex;
+        margin: 1rem;
+
+        height: 2rem;
+        /* margin: auto; */
+      }
+      .primary-btn {
+        display: flex;
+        margin: 1rem;
+        font-size: 1.5rem;
+        background-color: aquamarine;
+        border-radius: 5px;
+        height: 2.3rem;
+      }
+    </style>
+  </head>
+
+  <body
+    style="
+      background-image: url('./bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #fff;
+      color: azure;
+    "
+  >
+    <nav>
+      <div style="display: flex; flex-direction: row; justify-content: space-between">
+        <div style="font-size: 3rem">Morya Restaurant</div>
+        <div style="display: flex">
+          <span class="nav-link">
+            <a href="./index.html">Home Page</a>
+          </span>
+          <span class="nav-link">
+            <a href="./menu-page.html">Menu Page</a>
+          </span>
+          <span class="nav-link"> <a href="./aboutus.html">About Us</a> </span
+          ><span class="nav-link">
+            <a href="./contact-form.html">Contact Us</a>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+      <form>
+        <h1>Feeback Form</h1>
+        <div class="input-grp">
+          <label for="fname">Name</label>
+          <input type="text" id="name" />
+        </div>
+
+        <div class="input-grp">
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+        </div>
+        <div class="input-grp">
+          <label for="feedback">Feedback</label>
+          <textarea style="height: 5rem; width: 50rem">Please Enter your feedback...</textarea>
+        </div>
+
+        <button class="primary-btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
