@@ -9,23 +9,24 @@ public class BubbleSort {
     static Scanner in = new Scanner(System.in);
     static boolean takeCustomInputsFlag = false;
     static int lenOfArr;
-    static int[] arr = { 2, 5, 7, 3, 4, 9, 5 };
+    static int[] arr2 = { 2, 5, 7, 3, 4, 9, 5 };
+    static int[] arr = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 
     public static void main(String[] args) {
         execBubble();
     }
 
     private static void execBubble() {
-        int counter = 1;
-        for (int i = 0; i < arr.length; i++) {
+        // int counter = 1;
+        for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     swap(j, j + 1);
                 } else {
                     printArr(arr);
                 }
-                System.out.println(counter);
-                counter++;
+                // System.out.println(counter);
+                // counter++;
             }
         }
     }
