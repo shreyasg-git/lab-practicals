@@ -1,3 +1,6 @@
 {
-  "java.project.sourcePaths": ["Lp2\\02", "Lp2\\Dijkstra", "Lp2\\01", "All Sorts Of Things"]
+  "java.project.sourcePaths": ["Lp2\\01", "Lp2\\02", "Lp2\\Dijkstra", "AllSortsOfThings", "."],
+  "files.exclude": {
+    "**/*.class": true
+  }
 }
