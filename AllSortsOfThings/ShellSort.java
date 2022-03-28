@@ -1,30 +1,27 @@
-
 import java.util.*;
 
-public class InsertionSort {
-
+public class ShellSort {
+    static int numOfTests = 1000;
     static Scanner in = new Scanner(System.in);
     static boolean takeCustomInputsFlag = false;
     static int lenOfArr;
-    // static int[] arr = { 7, 5, 6, 7, 2, 3, 4, 6 };
-    static int[] arr = { 7, 5, 6, 7, 2, 3, 4, 6, 2 };
-    // answer =
+    static int[] arr = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 
     public static void main(String[] args) {
-        System.out.print("Want to give custom inputs? (0/1/2) : ");
+        System.out.print("Want to give custom inputs? (0/1/2 - random 1000 tests) : ");
         int customInputsFlag = in.nextInt();
         if (customInputsFlag == 0) {
-            execInsertionSort(arr);
+            execShellSort(arr);
         } else if (customInputsFlag == 1) {
             arr = takeInputs();
-            execInsertionSort(arr);
+            execShellSort(arr);
         } else if (customInputsFlag == 2) {
             PH.skipPrinting();
-            int numOfTests = 10000;
+            int numOfTests = 1000;
             for (int i = 0; i < numOfTests; i++) {
                 int[] a = AH.getRandomArray(100);
-                a = execInsertionSort(a);
-                boolean checkSorted = AH.testForDescSorted(a);
+                a = execShellSort(a);
+                boolean checkSorted = AH.testForAscSorted(a);
                 if (checkSorted) {
                     System.out.println("TEST " + i + " PASSED");
                 } else {
@@ -37,18 +34,12 @@ public class InsertionSort {
         }
     }
 
-    public static int[] execInsertionSort(int[] ar) {
-        for (int i = 1; i < ar.length; i++) {
-            int temp = ar[i];
-            int j = 0;
-            while (i - j - 1 >= 0 && ar[i - j - 1] < temp) {
-                ar[i - j] = ar[i - j - 1];
-                j++;
-            }
-            ar[i - j] = temp;
-            PH.printArrAndHighlight(ar, new Integer[] { i, i - j });
-        }
-        return ar;
+    public static int[] execShellSort(int[] arr) {
+        System.out.println(Arrays.toString(arr));
+
+        // first gap will be n/2 , then n/2 again
+
+        return arr;
     }
 
     public static int[] takeInputs() {
@@ -62,5 +53,4 @@ public class InsertionSort {
         }
         return arr;
     }
-
 }
