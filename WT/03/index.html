@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <h1>Calculator</h1>
 
     <div class="input-grp">
-      <label for="fname">Enter term (space separated): </label>
+      <label for="fname">Enter term: </label>
       <input type="text" id="term" />
     </div>
 
@@ -21,6 +25,7 @@
         <div class="oneKey" id="2">2</div>
         <div class="oneKey" id="3">3</div>
         <div class="signKey" id="+">+</div>
+        <div class="backSpaceKey" id="backSpace">&#8592;</div>
       </div>
       <div class="row">
         <div class="oneKey" id="4">4</div>
@@ -39,6 +44,7 @@
         <div class="oneKey" id="0">0</div>
         <div class="signKey" id="/">/</div>
       </div>
+      <div class="ans" id="ansDiv"></div>
     </div>
 
     <script src="index.js"></script>
