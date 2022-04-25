@@ -2,7 +2,13 @@
 <?xml-stylesheet href="empStyles.css"?>
 
 <!DOCTYPE Employee_Info [
-    <!ELEMENT Employee (#PCDATA)>
+    <!ELEMENT Employee_Info (Employee+)>
+    <!ELEMENT Employee (Name, Department, Phone, Email)>
+    <!ATTLIST Employee Employee_Number CDATA #REQUIRED>
+    <!ELEMENT Name (#PCDATA)>
+    <!ELEMENT Department (#PCDATA)>
+    <!ELEMENT Phone (#PCDATA)>
+    <!ELEMENT Email (#PCDATA)>
 ]>
 
 <Employee_Info>
@@ -35,5 +41,11 @@
     <Department>Product Department</Department>
     <Phone>9876543213</Phone>
     <Email>suyam@gmail.com</Email>
+  </Employee>
+  <Employee  Employee_Number="106">
+    <Name>Chetan Gamne</Name>
+    <Department>CEO</Department>
+    <Phone>9588601697</Phone>
+    <Email>chetan@gmail.com</Email>
   </Employee>
 </Employee_Info>
