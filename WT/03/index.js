@@ -22,7 +22,7 @@ signKeys.forEach((sk) => {
 });
 
 calculateButton.addEventListener("click", () => {
-  const regEx = /^\s*([-+]?)(\d+)(?:\s*([-+*\/])\s*((?:\s[-+])?\d+)\s*)+$/;
+  // const regEx = /^\s*([-+]?)(\d+)(?:\s*([-+*\/])\s*((?:\s[-+])?\d+)\s*)+$/;
   const regEx2 = /^[\d\+\/\*\.\- \(\)]*$/;
   if (regEx2.test(term.value)) {
     setAnswerDiv(eval(term.value), "answer");

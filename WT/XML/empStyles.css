@@ -1,0 +1,36 @@
+Employee_Info {
+  background: #121212;
+  padding: 2rem;
+}
+
+Employee {
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 5px;
+  padding: 0.1rem;
+  font-family: sans-serif;
+  background: #454545;
+  color: black;
+  display: block;
+}
+Name {
+  display: block;
+  border: solid 1px #454545;
+  margin-bottom: 0;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+Department {
+  margin-left: 2rem;
+  display: block;
+}
+Phone {
+  margin-left: 2rem;
+  display: block;
+}
+Email {
+  margin-left: 2rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
